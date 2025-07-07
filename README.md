@@ -7,6 +7,9 @@ We're excited that you're interested in joining jobs.at as a web developer! Befo
 ## Challenge Description
 
 // Add description of the challenge here
+job suche (title, location, firma etc...) + frontend design (autocomplete)
+neuer job eingabe (self-service)
+customer-management (advanced) registration/login, roles
 
 ## Tasks
 
@@ -56,7 +59,7 @@ composer --version
 
 ---
 
-## Project Startup
+## 3. Project Startup
 
 Now that you have the necessary tools installed, follow these steps to set up and run the project.
 
@@ -92,17 +95,9 @@ Now that you have the necessary tools installed, follow these steps to set up an
    php artisan key:generate
    ```
 
-6. Start the Laravel development server:
-
-   ```sh
-   php artisan serve
-   ```
-
-7. Open your browser and go to [http://localhost:8000/](http://localhost:8000/).
-
 ---
 
-## Frontend Setup
+## 4. Frontend Setup
 
 The project uses Vue.js for the frontend. Ensure you have Node.js installed before proceeding.
 
@@ -140,18 +135,9 @@ This process automatically detects changes to frontend files such as HTML, Vue c
 
 ---
 
-## Database Setup
+## 5. Database Setup
 
 To provide a more realistic user experience, the project uses a MySQL database. You need to start a MySQL database locally.
-
-### Setting Up the Database
-
-- If you already have MySQL installed, create a new database named `code_challenge`.
-- The default database credentials are:
-    - **User**: `root`
-    - **Password**: *(empty)*
-
-If you prefer different credentials, update the `.env` file accordingly.
 
 ### Installing MySQL
 
@@ -164,8 +150,28 @@ If you prefer different credentials, update the `.env` file accordingly.
   ```sh
   sudo apt-get install mysql-server
   ```
+  
+### Setting Up the Database
 
+- Start mysql with: mysql.server start
+- Connect with root user: mysql -u root
+  Per default the root user does not have a password. 
+  If you set one, you have to connect with mysql -u root -p and enter the password when prompted. Otherwise just omit the -p
+- Create test database: create database code_challenge;
+- Create the tables via the migrations:
+```sh
+   php artisan migrate
+```
 ---
+
+### Start the server
+- Start the Laravel development server:
+
+   ```sh
+   php artisan serve
+   ```
+
+- Open your browser and go to [http://localhost:8000/](http://localhost:8000/).
 
 ## Additional Tips
 
