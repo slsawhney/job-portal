@@ -6,14 +6,28 @@ We're excited that you're interested in joining jobs.at as a web developer! Befo
 
 ## Challenge Description
 
-// Add description of the challenge here
-job suche (title, location, firma etc...) + frontend design (autocomplete)
-neuer job eingabe (self-service)
-customer-management (advanced) registration/login, roles
+At jobs.at we obviously have to deal a lot of with jobs, companies and people who are looking for a job.
+Thus, this coding challenge will also have to do with our main topic :)
+
+We want you to create a small web app with vue.js and laravel-php where the user can find jobs he/she is interested in. Moreover, there should
+be the possibility to publish a new job for an admin user and make it available to potential candidates.
+The next section outlines the specific task we want you to do.
+If you cannot complete all the tasks, don't mind to send us the results you have. We'll discuss the coding challenge
+at the second interview with you together.
 
 ## Tasks
 
-// Add specific tasks for the challenge here
+1. The page should provide a home page which show a list of all available jobs and relevant information for the job
+and search inputs to be able to search for a job title or a location or other filtering options
+The data (jobs, company) and the searches should be stored in a mysql database and be processed by a laravel php backend
+
+2. A link to a second page on which new jobs can be entered should exist. Only registered users should be able to add new jobs
+with all the necessary data
+
+3. When a user adds a new job for a new company this user should be the owner of the company and no other user should be
+able to enter a job for this company unless the owner makes another user also the owner
+
+4. Make sure all user inputs are properly validated and that all backend code is covered by tests
 
 ---
 
