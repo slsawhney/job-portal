@@ -19,7 +19,7 @@ at the second interview with you together.
 
 1. The page should provide a home page which show a list of all available jobs and relevant information for the job
 and search inputs to be able to search for a job title or a location or other filtering options
-The data (jobs, company) and the searches should be stored in the database
+The data (jobs, company) and the searches should be stored in the database.
 
 2. A link to a second page on which new jobs can be entered should exist. Only registered users should be able to add new jobs
 with all the necessary data
