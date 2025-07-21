@@ -26,8 +26,8 @@ The searches done by the user should be stored in the database with information 
 3. A second page on which new jobs can be entered should exist. Only registered users should be able to add new jobs
 and companies with all the necessary data.
 
-4. When a user adds a new job for a new company this user should be the owner of the company and no other user should be
-able to enter a job for this company unless the owner makes another user also the owner.
+4. When a user adds a new job for a new company this user should be the owner of the company.
+No other user should be able to enter a job for this company unless the owner makes another user also the owner.
 
 5. Make sure all user inputs are properly validated and that all backend code is covered by tests.
 
