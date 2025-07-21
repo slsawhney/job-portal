@@ -17,17 +17,19 @@ at the second interview with you together.
 
 ## Tasks
 
-1. The page should provide a home page which show a list of all available jobs and relevant information for the job
-and search inputs to be able to search for a job title or a location or other filtering options
-The data (jobs, company) and the searches should be stored in the database.
+1. The page should provide a home page which show a list of all available jobs from the database
+with all the relevant information like job-description, location, employment-type etc. 
 
-2. A link to a second page on which new jobs can be entered should exist. Only registered users should be able to add new jobs
-with all the necessary data
+2. The page should provide search inputs to be able to search for a job title or a location or other filtering options.
+The searches done by the user should be stored in the database with information about the search and about the user (e.g. user-agent, ip, etc).
 
-3. When a user adds a new job for a new company this user should be the owner of the company and no other user should be
-able to enter a job for this company unless the owner makes another user also the owner
+3. A second page on which new jobs can be entered should exist. Only registered users should be able to add new jobs
+and companies with all the necessary data.
 
-4. Make sure all user inputs are properly validated and that all backend code is covered by tests
+4. When a user adds a new job for a new company this user should be the owner of the company and no other user should be
+able to enter a job for this company unless the owner makes another user also the owner.
+
+5. Make sure all user inputs are properly validated and that all backend code is covered by tests
 
 ---
 
