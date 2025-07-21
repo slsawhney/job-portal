@@ -10,14 +10,14 @@ At jobs.at we obviously have to deal a lot of with jobs, companies and people wh
 Thus, this coding challenge will also have to do with our main topic :)
 
 We want you to create a small web app with vue.js and laravel-php where the user can find jobs he/she is interested in. Moreover, there should
-be the possibility to publish a new job for an admin user and make it available to potential candidates.
+be the possibility to publish a new job for a user and make it available to potential candidates.
 The next section outlines the specific task we want you to do.
 If you cannot complete all the tasks, don't mind to send us the results you have. We'll discuss the coding challenge
 at the second interview with you together.
 
 ## Tasks
 
-1. The page should provide a home page which show a list of all available jobs from the database
+1. The page should provide a home page which shows a list of all available jobs from the database
 with all the relevant information like job-description, location, employment-type etc. 
 
 2. The page should provide search inputs to be able to search for a job title or a location or other filtering options.
@@ -29,7 +29,7 @@ and companies with all the necessary data.
 4. When a user adds a new job for a new company this user should be the owner of the company and no other user should be
 able to enter a job for this company unless the owner makes another user also the owner.
 
-5. Make sure all user inputs are properly validated and that all backend code is covered by tests
+5. Make sure all user inputs are properly validated and that all backend code is covered by tests.
 
 ---
 
