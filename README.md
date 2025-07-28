@@ -202,14 +202,14 @@ To provide a more realistic user experience, the project uses a MySQL database. 
 
 ## How to Submit Your Solution
 
-Please submit your solution **at least five hours before your second interview** so we have time to review it.
+Please submit your solution **at least a day before your second interview** so we have time to review it.
 
 ### Submission Options
 
 1. **Preferred**: Share a link to your forked GitHub repository.
 2. **Alternative**: If you don’t have a GitHub account, send your solution as a ZIP archive or a link to a cloud storage service.
 
-Send your submission to: [email@jobs.at](mailto\:email@jobs.at?subject=jobs.at%20Coding%20Challenge%20Submission).
+Send your submission to: [thomas-wutschek@jobs.at](mailto\:thomas-wutschek@jobs.at?subject=jobs.at%20Coding%20Challenge%20Submission).
 
 If you have any questions, feel free to reach out.
 
