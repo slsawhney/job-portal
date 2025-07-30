@@ -209,7 +209,7 @@ Please submit your solution **at least a day before your second interview** so w
 1. **Preferred**: Share a link to your forked GitHub repository.
 2. **Alternative**: If you don’t have a GitHub account, send your solution as a ZIP archive or a link to a cloud storage service.
 
-Send your submission to: [thomas.wutschek@jobs.at](mailto\:thomas.wutschek@jobs.at?subject=jobs.at%20Coding%20Challenge%20Submission).
+Send your submission to: [thomas.wutschek@jobs.at](mailto\:thomas.wutschek@jobs.at?subject=jobs.at%20Coding%20Challenge%20Submission) and [roman.sumereder@jobs.at](mailto\:roman.sumereder@jobs.at?subject=jobs.at%20Coding%20Challenge%20Submission).
 
 If you have any questions, feel free to reach out.
 
