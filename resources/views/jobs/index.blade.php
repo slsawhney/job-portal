@@ -1,5 +1,10 @@
 <x-layout>
     <h2>Current Jobs</h2>
+    <form method="GET" action="{{ route('jobs.search') }}">
+        <input type="text" name="q" placeholder="Keyword..." value="{{ old('q', $searchQuery ?? '') }}">
+        <input type="text" name="location" placeholder="Location..." value="{{ old('location', $searchLocation ?? '') }}">
+        <button type="submit" class="btn">Search</button>
+    </form>
     <ul>
         @foreach($jobs as $job)
             <li>
@@ -18,6 +23,6 @@
             </li>
         @endforeach
     </ul>
-    {{ $jobs->links() }}
+    {{ $jobs->withQueryString()->links() }}
 </x-layout>
 

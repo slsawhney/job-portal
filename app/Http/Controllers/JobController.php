@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Company;
 use App\Models\Job;
+use App\Models\SearchLog;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
@@ -91,5 +92,39 @@ class JobController extends Controller
             'success',
             'Company deleted!'
         );
+    }
+
+    public function search(Request $request)
+    {
+        // Log the search (only if at least one field is present).
+        if ($request->filled(['q']) || $request->filled(['location'])) {
+            SearchLog::create([
+                'keywords' => $request->input('q'),
+                'location' => $request->input('location'),
+                'ip_address' => $request->ip(),
+                'user_agent' => $request->userAgent(),
+            ]);
+        }
+
+        // Build query
+        $query = Job::query();
+
+        if ($q = $request->input('q')) {
+            $query->where('title', 'like', '%' . $q . '%');
+        }
+
+        if ($loc = $request->input('location')) {
+            $query->where('location', 'like', '%' . $loc . '%');
+        }
+
+        // Paginate results
+        $jobs = $query->latest()->paginate(10)->appends($request->only(['q', 'location']));
+
+        // Return view with search results
+        return view('jobs.index', [
+            'jobs' => $jobs,
+            'searchQuery' => $q,
+            'searchLocation' => $loc,
+        ]);
     }
 }

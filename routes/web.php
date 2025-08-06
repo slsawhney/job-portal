@@ -29,6 +29,7 @@ Route::middleware('auth')->controller(JobController::class)->group(function () {
     Route::post('/jobs/update/{job}', 'update')->name('jobs.update');
 });
 
+Route::get('/jobs/search', [JobController::class, 'search'])->name('jobs.search');
 Route::get('/jobs/{job}', [JobController::class, 'show'])->name('jobs.show');
 Route::get('/', [JobController::class, 'index'])->name('jobs.index');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
