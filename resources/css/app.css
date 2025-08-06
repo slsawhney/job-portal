@@ -10,3 +10,73 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+body {
+    @apply bg-gray-100 text-gray-700;
+}
+
+h1 {
+    @apply text-2xl font-bold text-green-600;
+}
+h2 {
+    @apply text-xl font-bold my-4;
+}
+h3 {
+    @apply text-lg font-bold my-4;
+}
+ul {
+    @apply my-10;
+}
+p {
+    @apply my-2;
+}
+
+/* header */
+header {
+    @apply bg-white;
+
+    nav {
+        @apply bg-white;
+        ul {
+            li {
+                @apply relative hover:bg-white;
+                a {
+                    @apply hover:text-green-600 block px-4 py-2;
+                }
+                ul {
+                    @apply absolute top-[-5px] left-0 hidden group-hover:block bg-white border border-green-600 rounded shadow-lg min-w-[200px] z-50;
+                    li {
+                        a {
+                            @apply block px-4 py-2 hover:bg-green-500 hover:text-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        @apply mr-auto;
+    }
+}
+
+/* form elements */
+form {
+    @apply max-w-screen-md mx-auto;
+}
+input, select, textarea {
+    @apply block w-full mt-2 mb-4 p-2 bg-white border border-gray-300 rounded-md;
+}
+
+/* custom classes */
+.container {
+    @apply max-w-screen-xl mx-auto px-12 py-8;
+}
+.card {
+    @apply bg-white rounded border border-green-600 px-3 py-3 my-4 flex-col justify-between items-center;
+}
+.highlight {
+    @apply border-l-4 border-l-green-600;
+}
+.btn {
+    @apply rounded px-3 py-2 border border-gray-600 bg-gray-200 hover:bg-green-600 hover:text-white;
+}

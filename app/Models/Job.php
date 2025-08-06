@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model
 {
+    /** @use HasFactory<\Database\Factories\JobFactory> */
+    use HasFactory;
+
     protected $fillable = [
         'title',
         'location',
@@ -15,9 +18,6 @@ class Job extends Model
         'employment_type',
         'company_id',
     ];
-
-    /** @use HasFactory<\Database\Factories\JobFactory> */
-    use HasFactory;
 
     public function company()
     {
