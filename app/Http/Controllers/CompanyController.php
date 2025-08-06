@@ -34,11 +34,21 @@ class CompanyController extends Controller
 
     public function edit(Company &$company)
     {
+        // check if the authenticated user owns the company.
+        if ($company->owner_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         return view('companies.edit', ['company' => $company]);
     }
 
     public function update(Request $request, Company $company)
     {
+        // check if the authenticated user owns the company.
+        if ($company->owner_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
@@ -70,6 +80,11 @@ class CompanyController extends Controller
 
     public function destroy(Company $company)
     {
+        // check if the authenticated user owns the company.
+        if ($company->owner_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $company->delete();
 
         return redirect()->route('companies.index')->with(

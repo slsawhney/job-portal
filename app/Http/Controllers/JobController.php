@@ -33,6 +33,11 @@ class JobController extends Controller
 
     public function edit(Job $job)
     {
+        // check if the authenticated user owns the job's company.
+        if ($job->company->owner_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $companies = Company::where('owner_id', auth()->id())->orderBy(
             'name',
             'asc'
@@ -86,6 +91,11 @@ class JobController extends Controller
 
     public function destroy(Job $job)
     {
+        // check if the authenticated user owns the job's company.
+        if ($job->company->owner_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $job->delete();
 
         return redirect()->route('jobs.index')->with(
